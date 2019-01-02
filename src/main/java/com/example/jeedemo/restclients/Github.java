@@ -11,6 +11,6 @@ import javax.inject.Qualifier;
 
 @Qualifier
 @Retention(RUNTIME)
-@Target({METHOD, FIELD})
+@Target({ METHOD, FIELD })
 public @interface Github {
 }

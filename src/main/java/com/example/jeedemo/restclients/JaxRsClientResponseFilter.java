@@ -11,14 +11,14 @@ import org.slf4j.LoggerFactory;
 
 public class JaxRsClientResponseFilter implements ClientResponseFilter {
 
-	private static final Logger logger = LoggerFactory.getLogger(JaxRsClientResponseFilter.class);
+    private static final Logger logger = LoggerFactory.getLogger(JaxRsClientResponseFilter.class);
 
-	@Override
-	public void filter(ClientRequestContext requestContext, ClientResponseContext responseContext) throws IOException {
-		long after = System.currentTimeMillis();
-		Long before = (Long) requestContext.getProperty(JaxRsClientRequestFilter.TIME_BEFORE);
+    @Override
+    public void filter(ClientRequestContext requestContext, ClientResponseContext responseContext) throws IOException {
+        long after = System.currentTimeMillis();
+        Long before = (Long) requestContext.getProperty(JaxRsClientRequestFilter.TIME_BEFORE);
 
-		logger.info("Call to [{}] took {} milliseconds.", requestContext.getUri(), (after - before));
-	}
+        logger.info("Call to [{}] took {} milliseconds.", requestContext.getUri(), (after - before));
+    }
 
 }
