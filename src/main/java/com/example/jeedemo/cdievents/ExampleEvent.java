@@ -7,7 +7,7 @@ public class ExampleEvent {
 
     private String name;
 
-    public ExampleEvent(String name) {
+    public ExampleEvent(final String name) {
         this.name = name;
     }
 }

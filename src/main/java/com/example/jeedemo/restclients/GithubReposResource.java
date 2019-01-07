@@ -18,7 +18,7 @@ public class GithubReposResource {
     @GET
     @Path("{username}")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Repo> listRepos(@PathParam("username") final String username) {
+    public final List<Repo> listRepos(@PathParam("username") final String username) {
         return service.listRepos(username);
     }
 }

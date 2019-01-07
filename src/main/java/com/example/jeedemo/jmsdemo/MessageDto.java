@@ -17,7 +17,7 @@ public class MessageDto implements Serializable {
     public MessageDto() {
     }
 
-    public MessageDto(String url, String payload) {
+    public MessageDto(final String url, final String payload) {
         this.url = url;
         this.payload = payload;
     }

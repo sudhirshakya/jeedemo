@@ -15,7 +15,7 @@ public class JaxRsClientRequestFilter implements ClientRequestFilter {
     protected static final String TIME_BEFORE = "time.before";
 
     @Override
-    public void filter(ClientRequestContext requestContext) throws IOException {
+    public final void filter(final ClientRequestContext requestContext) throws IOException {
         logger.debug("Making REST call to [{}].", requestContext.getUri());
 
         requestContext.getHeaders().add("Accept", "application/vnd.github.v3+json");

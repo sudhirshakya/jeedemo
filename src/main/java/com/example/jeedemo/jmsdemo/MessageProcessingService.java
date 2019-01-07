@@ -19,7 +19,7 @@ public class MessageProcessingService implements MessageListener {
     private static final Logger logger = LoggerFactory.getLogger(MessageProcessingService.class);
 
     @Override
-    public void onMessage(Message message) {
+    public final void onMessage(final Message message) {
         try {
             if (!(message instanceof ObjectMessage)) {
                 logger.warn("Received message was not an object message. Could not proceed further.");

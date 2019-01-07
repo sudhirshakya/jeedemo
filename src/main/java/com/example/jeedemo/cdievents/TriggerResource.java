@@ -13,7 +13,7 @@ public class TriggerResource {
 
     @GET
     @Path("{name}")
-    public String triggerEvent(@PathParam("name") final String name) {
+    public final String triggerEvent(@PathParam("name") final String name) {
         return service.triggerEvent(name);
     }
 }

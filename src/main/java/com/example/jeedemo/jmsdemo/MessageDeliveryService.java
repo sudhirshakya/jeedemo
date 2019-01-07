@@ -15,7 +15,7 @@ public class MessageDeliveryService {
     @Resource(lookup = "java:/jms/myapp/myqueue")
     private Queue inboundQueue;
 
-    public String handleEvent(final String name) {
+    public final String handleEvent(final String name) {
         try (JMSContext ctx = connectionFactory.createContext()) {
             MessageDto object = new MessageDto("https://google.com", name);
             ObjectMessage message = ctx.createObjectMessage(object);

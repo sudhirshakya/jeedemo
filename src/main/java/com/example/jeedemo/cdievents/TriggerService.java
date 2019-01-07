@@ -8,7 +8,7 @@ public class TriggerService {
     @Inject
     private Event<ExampleEvent> event;
 
-    public String triggerEvent(final String name) {
+    public final String triggerEvent(final String name) {
         try {
             ExampleEvent payload = new ExampleEvent(name);
             event.fire(payload);

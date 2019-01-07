@@ -13,7 +13,7 @@ public class JmsDemoResource {
 
     @GET
     @Path("{name}")
-    public void handleEvent(@PathParam("name") final String name) {
+    public final void handleEvent(@PathParam("name") final String name) {
         service.handleEvent(name);
     }
 }
