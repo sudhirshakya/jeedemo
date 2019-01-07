@@ -16,7 +16,7 @@ public class GithubReposService {
     private Client client;
 
     @ErrorHandler
-    public final List<Repo> listRepos(final String username) {
-return client.target("https://api.github.com/users").path(username).path("repos").request().get(REPOS_TYPE);
+    public List<Repo> listRepos(final String username) {
+        return client.target("https://api.github.com/users").path(username).path("repos").request().get(REPOS_TYPE);
     }
 }

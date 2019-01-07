@@ -14,7 +14,7 @@ public class ErrorHandlingInterceptor {
     private static final Logger logger = LoggerFactory.getLogger(ErrorHandlingInterceptor.class);
 
     @AroundInvoke
-    public final Object handleException(final InvocationContext ctx) {
+    public Object handleException(final InvocationContext ctx) {
         try {
             return ctx.proceed();
         } catch (Exception ex) {
